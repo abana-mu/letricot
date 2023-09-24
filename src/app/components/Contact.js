@@ -3,7 +3,7 @@ export default function Contact() {
     <section id='contact' className='text-center px-4 sm:px-6 lg:px-8 pt-14 pb-14'>
       <h2 className='text-5xl lg:text-6xl tracking-wider mb-8'>Contact us</h2>
       <div className='max-w-xl mx-auto'>
-        <form className='pb-12'>
+        <form className='pb-12' netlify>
           <div className='mt-10 grid grid-cols-1 gap-x-6 gap-y-8 sm:grid-cols-6'>
             <div className='sm:col-span-3'>
               <label htmlFor='first-name' className='block text-sm text-left font-medium leading-6 text-gray-900'>
@@ -15,7 +15,7 @@ export default function Contact() {
                   name='first-name'
                   id='first-name'
                   autoComplete='given-name'
-                  className='block w-full rounded-sm border-0 py-3 px-2 text-gray-900 shadow-sm ring-1 ring-inset ring-stone-300 placeholder:text-gray-400  sm:text-sm sm:leading-6'
+                  className='block w-full rounded-sm border border-stone-400 py-3 px-2 text-gray-900 shadow-sm  placeholder:text-gray-400  sm:text-sm sm:leading-6'
                 />
               </div>
             </div>
@@ -30,7 +30,7 @@ export default function Contact() {
                   name='last-name'
                   id='last-name'
                   autoComplete='family-name'
-                  className='block w-full rounded-sm border-0 py-3 px-2 text-gray-900 shadow-sm ring-1 ring-inset ring-stone-300 placeholder:text-gray-400  sm:text-sm sm:leading-6'
+                  className='block w-full rounded-sm border border-stone-400 py-3 px-2 text-gray-900 shadow-sm  placeholder:text-gray-400  sm:text-sm sm:leading-6'
                 />
               </div>
             </div>
@@ -45,7 +45,7 @@ export default function Contact() {
                   name='email'
                   type='email'
                   autoComplete='email'
-                  className='block w-full rounded-sm border-0 py-3 px-2 text-gray-900 shadow-sm ring-1 ring-inset ring-stone-300 placeholder:text-gray-400  sm:text-sm sm:leading-6'
+                  className='block w-full rounded-sm border border-stone-400 py-3 px-2 text-gray-900 shadow-sm  placeholder:text-gray-400  sm:text-sm sm:leading-6'
                 />
               </div>
             </div>
@@ -60,7 +60,7 @@ export default function Contact() {
                   name='company'
                   id='company'
                   autoComplete='company'
-                  className='block w-full rounded-sm border-0 py-3 px-2 text-gray-900 shadow-sm ring-1 ring-inset ring-stone-300 placeholder:text-gray-400  sm:text-sm sm:leading-6'
+                  className='block w-full rounded-sm border border-stone-400 py-3 px-2 text-gray-900 shadow-sm  placeholder:text-gray-400  sm:text-sm sm:leading-6'
                 />
               </div>
             </div>
@@ -77,7 +77,7 @@ export default function Contact() {
                   name='message'
                   id='message'
                   autoComplete='message'
-                  className='block w-full rounded-sm border-0 py-3 px-2 text-gray-900 shadow-sm ring-1 ring-inset ring-stone-300 placeholder:text-gray-400  sm:text-sm sm:leading-6'
+                  className='block w-full rounded-sm border border-stone-400 py-3 px-2 text-gray-900 shadow-sm  placeholder:text-gray-400  sm:text-sm sm:leading-6'
                 />
               </div>
             </div>

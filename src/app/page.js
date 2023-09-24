@@ -13,7 +13,7 @@ export default function Home() {
     <>
 
       <Sidebar />
-      <div className="ml-24">
+      <div className="ml-16 lg:ml-24">
         <Navbar />
         <main className='mx-auto'>
           <About />
