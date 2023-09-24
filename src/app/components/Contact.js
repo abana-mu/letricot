@@ -3,7 +3,7 @@ export default function Contact() {
     <section id='contact' className='text-center px-4 sm:px-6 lg:px-8 pt-14 pb-14'>
       <h2 className='text-5xl lg:text-6xl tracking-wider mb-8'>Contact us</h2>
       <div className='max-w-xl mx-auto'>
-        <form className='pb-12' netlify>
+        <form className='pb-12' netlify="true">
           <div className='mt-10 grid grid-cols-1 gap-x-6 gap-y-8 sm:grid-cols-6'>
             <div className='sm:col-span-3'>
               <label htmlFor='first-name' className='block text-sm text-left font-medium leading-6 text-gray-900'>
