@@ -59,14 +59,20 @@ export default function Navbar() {
                     key={item.name}
                     href={item.href}
                     className='-mx-3 uppercase block rounded-lg px-3 py-2 text-xl tracking-wider font-medium leading-7 text-gray-900 hover:bg-gray-50'
-                    onClick={() => setMobileMenuOpen(false)}>
+                    onClick={() =>
+                      setTimeout(() => {
+                        setMobileMenuOpen(false);
+                      }, 10)
+                    }>
                     {item.name}
                   </Link>
                 ))}
               </div>
               <div className='py-8'>
-                <Link href='#contact' className=' bg-stone-900 uppercase px-3.5 py-2.5 text-lg font-medium text-gray-50 shadow-sm hover:bg-neutral-800'>
-                Contact Us
+                <Link
+                  href='#contact'
+                  className=' bg-stone-900 uppercase px-3.5 py-2.5 text-lg font-medium text-gray-50 shadow-sm hover:bg-neutral-800'>
+                  Contact Us
                 </Link>
               </div>
             </div>

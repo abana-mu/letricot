@@ -1,9 +1,28 @@
+import { useState } from 'react';
+
 export default function Contact() {
+  const [submitMessage, setSubmitMessage] = useState(false);
+  const [errorMessage, setErrorMessage] = useState(false);
+
+  const handleSubmit = (event) => {
+    event.preventDefault();
+    const myForm = event.target;
+    const formData = new FormData(myForm);
+
+    fetch('/', {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
+      body: new URLSearchParams(formData).toString(),
+    })
+      .then(() => setSubmitMessage(true))
+      .catch((error) => setErrorMessage(true));
+  };
+
   return (
     <section id='contact' className='text-center px-4 sm:px-6 lg:px-8 pt-14 pb-14'>
       <h2 className='text-5xl lg:text-6xl tracking-wider mb-8'>Contact us</h2>
       <div className='max-w-xl mx-auto'>
-        <form className='pb-12' netlify="true">
+        <form onSubmit={handleSubmit} className='pb-12' id='contact-form' name='contact' method='POST' data-netlify='true'>
           <div className='mt-10 grid grid-cols-1 gap-x-6 gap-y-8 sm:grid-cols-6'>
             <div className='sm:col-span-3'>
               <label htmlFor='first-name' className='block text-sm text-left font-medium leading-6 text-gray-900'>
@@ -65,7 +84,6 @@ export default function Contact() {
               </div>
             </div>
 
-
             <div className='col-span-full'>
               <label htmlFor='message' className='block text-sm text-left font-medium leading-6 text-gray-900'>
                 Message
@@ -83,6 +101,8 @@ export default function Contact() {
             </div>
           </div>
           <div className='mt-6 flex items-center justify-end gap-x-6'>
+            <div>{submitMessage && <p>Your form was successfully submitted</p>}</div>
+            <div>{errorMessage && <p>Oh no, there was an error... please contact us at @@@</p>}</div>
             <button
               type='submit'
               className='bg-neutral-900 rounded-sm uppercase px-5 py-2.5 text-md font-medium text-gray-50 shadow-sm hover:bg-neutral-800'>
