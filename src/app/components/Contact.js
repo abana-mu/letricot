@@ -24,25 +24,70 @@ export default function Contact() {
     <section id='contact' className='text-center px-4 sm:px-6 lg:px-8 pt-14 pb-14'>
       <h2 className='text-5xl xl:text-6xl tracking-wider mb-8'>Contact us</h2>
       <div className='max-w-xl mx-auto'>
-      <form name="contact" method="POST" data-netlify="true" action="/success">
-          <input type='hidden' name='form-name' value='contact' />
-          <p>
-            <input type='text' name='firstname' id='firstname' />
-            <label htmlFor='yourname'>Your Name:</label> <br />
-            <input type='text' name='name' id='yourname' />
-          </p>
-          <p>
-            <label htmlFor='youremail'>Your Email:</label> <br />
-            <input type='email' name='email' id='youremail' />
-          </p>
-          <p>
-            <label htmlFor='yourmessage'>Message:</label> <br />
-            <textarea name='message' id='yourmessage'></textarea>
-          </p>
-          <p>
-            <button type='submit'>Send</button>
-          </p>
-        </form>
+        <div className='max-w-xl mx-auto mt-10 p-8'>
+          <form name='contact' method='POST' data-netlify='true'>
+            <input type='hidden' name='form-name' value='contact' />
+
+            <div className='mb-4'>
+              <label className='block text-gray-700 text-sm font-bold mb-2' htmlFor='firstName'>
+                First Name
+              </label>
+              <input
+                className='shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline'
+                id='firstName'
+                type='text'
+                name='firstName'
+                required
+              />
+            </div>
+
+            <div className='mb-4'>
+              <label className='block text-gray-700 text-sm font-bold mb-2' htmlFor='lastName'>
+                Last Name
+              </label>
+              <input
+                className='shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline'
+                id='lastName'
+                type='text'
+                name='lastName'
+                required
+              />
+            </div>
+
+            <div className='mb-4'>
+              <label className='block text-gray-700 text-sm font-bold mb-2' htmlFor='email'>
+                Email
+              </label>
+              <input
+                className='shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline'
+                id='email'
+                type='email'
+                name='email'
+                required
+              />
+            </div>
+
+            <div className='mb-4'>
+              <label className='block text-gray-700 text-sm font-bold mb-2' htmlFor='company'>
+                Company
+              </label>
+              <input
+                className='shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline'
+                id='company'
+                type='text'
+                name='company'
+              />
+            </div>
+
+            <div className='flex items-center justify-between'>
+              <button
+                className='bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline'
+                type='submit'>
+                Submit
+              </button>
+            </div>
+          </form>
+        </div>
 
         {/* <form onSubmit={handleSubmit} className='pb-12' id='contact-form' name='contact' method='POST' data-netlify='true'>
           <div className='mt-10 grid grid-cols-1 gap-x-6 gap-y-8 sm:grid-cols-6'>
