@@ -1,10 +1,10 @@
 export default function About() {
   return (
     <section id='about' className='grid lg:grid-cols-2 border-b-2 border-black'>
-      <div className='border-b-2 lg:border-b-0 lg:border-r-2 border-black px-4 sm:px-6 lg:px-10 '>
-        <div className='py-8 sm:py-12'>
-          <h2 className='grid-title mb-10'>About Us</h2>
-          <div className='text-xl lg:text-2xl leading-normal tracking-wide space-y-6 lg:space-y-8'>
+      <div className='border-b-2 lg:border-b-0 lg:border-r-2 border-black box-x-layout'>
+        <div className='box-y-layout'>
+          <h2 className='title-size mb-10'>About Us</h2>
+          <div className='text-size space-y-6 lg:space-y-8'>
             <p>For the past four decades we have been manufacturing knitwear for renowned European brands.</p>
             <p>
               There is something tactile and emotional about knitwear. We get attached to a sweater in ways that we don’t always do with other
@@ -18,7 +18,7 @@ export default function About() {
           </div>
         </div>
       </div>
-      <div className='py-8 sm:py-12 px-4 sm:px-6 lg:px-8 bg-stone-200'>
+      <div className='box-y-layout box-x-layout bg-stone-200'>
         <iframe
           className='sticky top-10 rounded-lg border-2 border-black w-full aspect-video'
           src='https://www.youtube.com/embed/K-O_o7YqoP8?si=n5im-UVbvuY7K3rW'
