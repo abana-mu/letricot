@@ -6,8 +6,10 @@ export default function Contact() {
 
   const handleSubmit = (event) => {
     event.preventDefault();
-    const myForm = event.target;
-    const formData = new FormData(myForm);
+    // const myForm = event.target;
+    // const formData = new FormData(myForm);
+
+    const formData = new FormData(event.currentTarget);
 
     fetch('/', {
       method: 'POST',
@@ -20,9 +22,23 @@ export default function Contact() {
 
   return (
     <section id='contact' className='text-center px-4 sm:px-6 lg:px-8 pt-14 pb-14'>
-      <h2 className='text-5xl lg:text-6xl tracking-wider mb-8'>Contact us</h2>
+      <h2 className='text-5xl xl:text-6xl tracking-wider mb-8'>Contact us</h2>
       <div className='max-w-xl mx-auto'>
-        <form onSubmit={handleSubmit} className='pb-12' id='contact-form' name='contact' method='POST' data-netlify='true'>
+        <form name='contact' method='POST' data-netlify="true" onSubmit='submit' data-netlify-honeypot="bot-field">
+          <input className="hidden" type="hidden" name="bot-field" />
+          <label htmlFor='first-name' className='block text-sm text-left font-medium leading-6 text-gray-900'>
+            First name
+          </label>
+          <input
+            type='text'
+            name='first-name'
+            id='first-name'
+            className='block w-full rounded-sm border border-gray-900 py-3 px-2 text-gray-900 shadow-sm  placeholder:text-gray-400  sm:text-sm sm:leading-6'
+          />
+          <button type='submit'>Submit</button>
+        </form>
+
+        {/* <form onSubmit={handleSubmit} className='pb-12' id='contact-form' name='contact' method='POST' data-netlify='true'>
           <div className='mt-10 grid grid-cols-1 gap-x-6 gap-y-8 sm:grid-cols-6'>
             <div className='sm:col-span-3'>
               <label htmlFor='first-name' className='block text-sm text-left font-medium leading-6 text-gray-900'>
@@ -34,7 +50,7 @@ export default function Contact() {
                   name='first-name'
                   id='first-name'
                   autoComplete='given-name'
-                  className='block w-full rounded-sm border border-stone-400 py-3 px-2 text-gray-900 shadow-sm  placeholder:text-gray-400  sm:text-sm sm:leading-6'
+                  className='block w-full rounded-sm border border-gray-900 py-3 px-2 text-gray-900 shadow-sm  placeholder:text-gray-400  sm:text-sm sm:leading-6'
                 />
               </div>
             </div>
@@ -49,7 +65,7 @@ export default function Contact() {
                   name='last-name'
                   id='last-name'
                   autoComplete='family-name'
-                  className='block w-full rounded-sm border border-stone-400 py-3 px-2 text-gray-900 shadow-sm  placeholder:text-gray-400  sm:text-sm sm:leading-6'
+                  className='block w-full rounded-sm border border-gray-900 py-3 px-2 text-gray-900 shadow-sm  placeholder:text-gray-400  sm:text-sm sm:leading-6'
                 />
               </div>
             </div>
@@ -64,7 +80,7 @@ export default function Contact() {
                   name='email'
                   type='email'
                   autoComplete='email'
-                  className='block w-full rounded-sm border border-stone-400 py-3 px-2 text-gray-900 shadow-sm  placeholder:text-gray-400  sm:text-sm sm:leading-6'
+                  className='block w-full rounded-sm border border-gray-900 py-3 px-2 text-gray-900 shadow-sm  placeholder:text-gray-400  sm:text-sm sm:leading-6'
                 />
               </div>
             </div>
@@ -79,7 +95,7 @@ export default function Contact() {
                   name='company'
                   id='company'
                   autoComplete='company'
-                  className='block w-full rounded-sm border border-stone-400 py-3 px-2 text-gray-900 shadow-sm  placeholder:text-gray-400  sm:text-sm sm:leading-6'
+                  className='block w-full rounded-sm border border-gray-900 py-3 px-2 text-gray-900 shadow-sm  placeholder:text-gray-400  sm:text-sm sm:leading-6'
                 />
               </div>
             </div>
@@ -95,7 +111,7 @@ export default function Contact() {
                   name='message'
                   id='message'
                   autoComplete='message'
-                  className='block w-full rounded-sm border border-stone-400 py-3 px-2 text-gray-900 shadow-sm  placeholder:text-gray-400  sm:text-sm sm:leading-6'
+                  className='block w-full rounded-sm border border-gray-900 py-3 px-2 text-gray-900 shadow-sm  placeholder:text-gray-400  sm:text-sm sm:leading-6'
                 />
               </div>
             </div>
@@ -109,7 +125,7 @@ export default function Contact() {
               Sumbit
             </button>
           </div>
-        </form>
+        </form> */}
       </div>
     </section>
   );

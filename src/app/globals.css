@@ -22,3 +22,27 @@ body {
 a{
   @apply text-blue-700 hover:underline;
 }
+
+.grid-layout{
+  @apply grid lg:grid-cols-4 border-b-2 border-black pt-10 pb-0 sm:pb-10 lg:py-0 space-y-8 lg:space-y-0;
+}
+
+.grid-title-layout{
+  @apply lg:border-r-2 lg:border-black lg:py-12 px-4 sm:px-6 lg:px-10;
+}
+
+.grid-title{
+  @apply text-left text-5xl 2xl:text-6xl tracking-wider;
+}
+
+.grid-content-layout{
+  @apply col-span-3 text-xl lg:text-2xl lg:py-12 space-y-8 leading-normal tracking-wide;
+}
+
+.grid-content-text{
+  @apply px-4 sm:px-6 lg:px-10;
+}
+
+.grid-content-image{
+  @apply w-full sm:px-6 lg:px-10;
+}
