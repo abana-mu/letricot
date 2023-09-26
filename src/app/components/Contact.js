@@ -24,18 +24,24 @@ export default function Contact() {
     <section id='contact' className='text-center px-4 sm:px-6 lg:px-8 pt-14 pb-14'>
       <h2 className='text-5xl xl:text-6xl tracking-wider mb-8'>Contact us</h2>
       <div className='max-w-xl mx-auto'>
-        <form name='contact' method='POST' data-netlify="true" onSubmit='submit' data-netlify-honeypot="bot-field">
-          <input className="hidden" type="hidden" name="bot-field" />
-          <label htmlFor='first-name' className='block text-sm text-left font-medium leading-6 text-gray-900'>
-            First name
-          </label>
-          <input
-            type='text'
-            name='first-name'
-            id='first-name'
-            className='block w-full rounded-sm border border-gray-900 py-3 px-2 text-gray-900 shadow-sm  placeholder:text-gray-400  sm:text-sm sm:leading-6'
-          />
-          <button type='submit'>Submit</button>
+      <form name="contact" method="POST" data-netlify="true" action="/success">
+          <input type='hidden' name='form-name' value='contact' />
+          <p>
+            <input type='text' name='firstname' id='firstname' />
+            <label htmlFor='yourname'>Your Name:</label> <br />
+            <input type='text' name='name' id='yourname' />
+          </p>
+          <p>
+            <label htmlFor='youremail'>Your Email:</label> <br />
+            <input type='email' name='email' id='youremail' />
+          </p>
+          <p>
+            <label htmlFor='yourmessage'>Message:</label> <br />
+            <textarea name='message' id='yourmessage'></textarea>
+          </p>
+          <p>
+            <button type='submit'>Send</button>
+          </p>
         </form>
 
         {/* <form onSubmit={handleSubmit} className='pb-12' id='contact-form' name='contact' method='POST' data-netlify='true'>
